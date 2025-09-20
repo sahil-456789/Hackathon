@@ -103,50 +103,56 @@ const getProjectHealthAnalysis = async (jiraMetrics, confluenceMetrics) => {
       { role: "user", content: `Confluence metrics: ${confluenceMetrics}` },
       {
         role: "user",
-        content: `Based on these metrics, this project health analysis of given JSON format type don't add any comment inside json I need clean json which can be easilty parsed by JSON.parse:
+        content: `Based on these metrics, create a project health analysis in the following JSON format (no comments, clean JSON):
         {
-          "projectHealth": "GREEN|YELLOW|RED",
-          "score": 0-100, // Overall project health score
+          "projectHealth": "GREEN",
+          "score": 92,
           "metrics": {
-            "velocity": number // Number representing team velocity,
+            "velocity": 78,
             "issueStatus": {
-              "open": number, // Number of open issues
-              "inProgress": number, // Number of issues in progress
-              "closed": number // Number of closed issues
+              "open": 23,
+              "inProgress": 67,
+              "closed": 10
             },
             "teamPerformance": {
-                "engagement": 78, // Team engagement score out of 100
-                "satisfaction": 72, // Team satisfaction score out of 100
-                "velocity": 75 // Team velocity score out of 100
+                "engagement": 78,
+                "satisfaction": 72,
+                "velocity": 75
             },
-            projectRiskFactors: { // Overall project risk factors
-                "risk1": {
-                    "description": "Description of the risk factor",
-                    "impact": "HIGH|MEDIUM|LOW", // Impact level of the risk
-                    "mitigationStatus": "NOT_STARTED|IN_PROGRESS|COMPLETED" // Current status of risk mitigation
+            "projectRiskFactors": [
+                {
+                    "id": "risk1",
+                    "description": "Focus on Accessibility project",
+                    "impact": "MEDIUM",
+                    "mitigationStatus": "NOT_STARTED"
                 }
-            }[] // List of overall project risk factors
-            ,
-            "milestones": {
-                "title": "Milestone 1",
-                "description": "Description of Milestone 1",
-                "status": "GREEN"|"YELLOW"|"RED", // status of the milestone based on due date and completion percentage
-                "completionPercentage": number, // percentage of tasks completed for the milestone
-                "dueDate": "2023-10-01", // due date of the milestone
-                "velocity": number // velocity of the team related to this milestone,
-                "riskFactors": { // Milestone risk factors
-                    "risk1": {
-                        "description": "Description of the risk factor",
-                        "impact": "HIGH|MEDIUM|LOW", // Impact level of the risk
-                        "mitigationStatus": "NOT_STARTED|IN_PROGRESS|COMPLETED" // Current status of risk mitigation
-                    }
-                }[] // List of risk factors affecting this milestone
-            }[],
-            "recommendations": {
-                "title": "Recommendation 1",
-                "description": "Description of recommendation 1",
-                "status": "NOT_STARTED|IN_PROGRESS|COMPLETED"
-            }[],
+            ],
+            "milestones": [
+                {
+                    "title": "Accessibility Milestone",
+                    "description": "Post GA task briefs",
+                    "status": "GREEN",
+                    "completionPercentage": 60,
+                    "dueDate": "2023-10-01",
+                    "velocity": 78,
+                    "riskFactors": [
+                        {
+                            "id": "risk1",
+                            "description": "Focus on Accessibility project",
+                            "impact": "MEDIUM",
+                            "mitigationStatus": "NOT_STARTED"
+                        }
+                    ]
+                }
+            ],
+            "recommendations": [
+                {
+                    "id": "rec1",
+                    "title": "Improve Team Velocity",
+                    "description": "Focus on removing blockers and improving workflow",
+                    "status": "NOT_STARTED"
+                }
+            ]
           },
           "analysis": "summary text"
         }`,
@@ -161,6 +167,76 @@ app.use(express.json()); // body parser
 
 // Routes
 app.use("/api/products", productRoutes);
+
+// Test endpoint with sample data for quick testing
+app.get("/api/project-health-test", async (req, res) => {
+  try {
+    const sampleData = {
+      projectHealth: "GREEN",
+      score: 92,
+      metrics: {
+        velocity: 78,
+        issueStatus: {
+          open: 23,
+          inProgress: 67,
+          closed: 10,
+        },
+        teamPerformance: {
+          engagement: 78,
+          satisfaction: 72,
+          velocity: 75,
+        },
+        projectRiskFactors: [
+          {
+            id: "risk1",
+            description: "Focus on Accessibility project",
+            impact: "MEDIUM",
+            mitigationStatus: "NOT_STARTED",
+          },
+        ],
+        milestones: [
+          {
+            title: "Accessibility Milestone",
+            description: "Post GA task briefs",
+            status: "GREEN",
+            completionPercentage: 60,
+            dueDate: "2023-10-01",
+            velocity: 78,
+            riskFactors: [
+              {
+                id: "risk1",
+                description: "Focus on Accessibility project",
+                impact: "MEDIUM",
+                mitigationStatus: "NOT_STARTED",
+              },
+            ],
+          },
+        ],
+        recommendations: [
+          {
+            id: "rec1",
+            title: "Improve Team Velocity",
+            description: "Focus on removing blockers and improving workflow",
+            status: "NOT_STARTED",
+          },
+          {
+            id: "rec2",
+            title: "Address Accessibility Risks",
+            description: "Start mitigation strategies for accessibility project risks",
+            status: "NOT_STARTED",
+          },
+        ],
+      },
+      analysis:
+        "Project health is currently green. The team's velocity is good, but there's a moderate risk factor associated with the Accessibility project. There are some milestones progressing. Recommendations for improvement include increasing team velocity, assessing risk mitigation status of the 'Accessibility' project milestone, and addressing the 'Accessibility' risk factor.",
+    };
+
+    res.json(sampleData);
+  } catch (error) {
+    console.error("Error returning sample data:", error);
+    res.status(500).send({ error: "Failed to get sample project health data" });
+  }
+});
 
 app.get("/api/project-health", async (req, res) => {
   try {
