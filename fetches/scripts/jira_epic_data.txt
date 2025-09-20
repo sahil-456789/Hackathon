@@ -1,0 +1,818 @@
+JIRA EPIC/ISSUE DATA EXPORT
+Generated on: 2025-09-20 14:47:02
+Requested Issues: A11Y-676
+Original Links: https://browserstack.atlassian.net/browse/A11Y-676
+================================================================================
+
+EXPORT SUMMARY
+Main Issues Processed: 1
+Total Issues Exported: 30
+================================================================================
+
+
+[MAIN ISSUE 1/1]
+
+================================================================================
+Issue Key: A11Y-676
+Summary: Support Local testing in Website scanner
+Type: Epic
+Status: New Item
+Priority: P2
+Project: Accessibility (A11Y)
+Epic: N/A
+Story Points: N/A
+Sprint: N/A
+Assignee: Kranthi Anugu
+Reporter: Chinmaya Patanaik
+Creator: Chinmaya Patanaik
+Created: 2023-11-15T11:24:02.325+0530
+Updated: 2024-04-05T12:43:08.021+0530
+Resolved: Not resolved
+Comments: 0
+Attachments: 0
+URL: https://browserstack.atlassian.net/browse/A11Y-676
+
+Description:
+TB:    Design:    Tech spec:    PRs:
+================================================================================
+
+  📋 EPIC ISSUES (8 issues):
+
+  [Epic Issue 1/8]
+  
+  ================================================================================
+  Issue Key: A11Y-677
+  Summary: [BE] Endpoint to fetch local settings
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 3.0
+  Sprint: N/A
+  Assignee: Chinmaya Patanaik
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-15T11:24:41.345+0530
+  Updated: 2023-11-24T16:21:11.644+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-677
+  
+  Description:
+  * Whether Central local testing has been enabled for the group or not.
+  ================================================================================
+
+  [Epic Issue 2/8]
+  
+  ================================================================================
+  Issue Key: A11Y-678
+  Summary: [BE] Endpoint to fetch a list of tunnels for a user
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 3.0
+  Sprint: N/A
+  Assignee: Chinmaya Patanaik
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-15T11:25:13.663+0530
+  Updated: 2023-11-24T16:21:30.332+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-678
+  
+  Description:
+  No description
+  ================================================================================
+
+  [Epic Issue 3/8]
+  
+  ================================================================================
+  Issue Key: A11Y-679
+  Summary: [BE] Update local testing info on Website scanner touch points
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 2.0
+  Sprint: N/A
+  Assignee: Chinmaya Patanaik
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-15T11:29:26.652+0530
+  Updated: 2023-11-24T16:21:48.469+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-679
+  
+  Description:
+  Update the following endpoints:
+
+* {{/site-scanner}}
+* {{/site-scanner/scan-details/<id>}}
+* {{/api/scan_configs/<id>}}
+  ================================================================================
+
+  [Epic Issue 4/8]
+  
+  ================================================================================
+  Issue Key: A11Y-680
+  Summary: [BE] Trigger a local Automate session - Bolt
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 2.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-15T11:40:17.787+0530
+  Updated: 2023-11-24T16:22:07.164+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-680
+  
+  Description:
+  * Create automate capabilities
+* Make changes in Bolt to trigger a local Automate session
+  ================================================================================
+
+  [Epic Issue 5/8]
+  
+  ================================================================================
+  Issue Key: A11Y-689
+  Summary: [BE] Create endpoints fetch Local specific information - railsApp
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 5.0
+  Sprint: N/A
+  Assignee: Chinmaya Patanaik
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-16T16:13:21.394+0530
+  Updated: 2023-11-24T16:22:22.893+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-689
+  
+  Description:
+  No description
+  ================================================================================
+
+  [Epic Issue 6/8]
+  
+  ================================================================================
+  Issue Key: A11Y-694
+  Summary: [FE] Add Local settings to New Scan 
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 3.0
+  Sprint: N/A
+  Assignee: Mridul Kumar
+  Reporter: Mridul Kumar
+  Creator: Mridul Kumar
+  Created: 2023-11-20T11:55:41.400+0530
+  Updated: 2024-01-04T21:34:57.068+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-694
+  
+  Description:
+  * Add Enable CTA to new scan modal.
+* Check for CLT enabled. If not open another modal which will allow the user to select the active binaries.
+* Send the data in the scan config for local testing.
+* Add checks in Landing page/ View Scan config modal against individual reports if local testing is enabled or not.
+  ================================================================================
+
+  [Epic Issue 7/8]
+  
+  ================================================================================
+  Issue Key: A11Y-719
+  Summary: [QA] Local testing flow in Website scans
+  Type: Story
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 5.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Chinmaya Patanaik
+  Creator: Chinmaya Patanaik
+  Created: 2023-11-22T11:51:32.561+0530
+  Updated: 2024-01-04T18:46:01.714+0530
+  Resolved: Not resolved
+  Comments: 1
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-719
+  
+  Description:
+  * [https://github.com/browserstack/accessibility/pull/227|https://github.com/browserstack/accessibility/pull/227|smart-link] 
+* [https://github.com/browserstack/railsApp/pull/111080|https://github.com/browserstack/railsApp/pull/111080|smart-link] 
+* [https://github.com/browserstack/bolt/pull/33|https://github.com/browserstack/bolt/pull/33|smart-link] 
+* [https://github.com/browserstack/frontend/pull/4222|https://github.com/browserstack/frontend/pull/4222|smart-link] 
+  ================================================================================
+
+  [Epic Issue 8/8]
+  
+  ================================================================================
+  Issue Key: A11Y-758
+  Summary: Scans not starting when binary is stopped before creating the scan
+  Type: Story
+  Status: Closed
+  Priority: P3
+  Project: Accessibility (A11Y)
+  Epic: A11Y-676
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-27T18:38:11.024+0530
+  Updated: 2024-08-30T14:51:57.160+0530
+  Resolved: Not resolved
+  Comments: 2
+  Attachments: 1
+  URL: https://browserstack.atlassian.net/browse/A11Y-758
+  
+  Description:
+  Repro steps:
+
+# Run a binary. Select the binary in the Website scan.
+# Before creating the scan, stop the running binary
+# Create the scan
+
+Current behaviour: Run not started
+
+!Screenshot 2023-11-27 at 6.37.23 PM.png|width=1101,height=119!
+
+Expected behaviour: Error-state should be shown
+  ================================================================================
+
+  📝 SUBTASKS (21 subtasks):
+
+  [Subtask 1/21]
+  
+  ================================================================================
+  Issue Key: A11Y-721
+  Summary: [BE] Properties are not getting captured from binaries
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-22T20:17:55.699+0530
+  Updated: 2023-11-27T10:52:46.925+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-721
+  
+  Description:
+  Params passed are not getting captured in the tunnels api which is used for properties value
+  ================================================================================
+
+  [Subtask 2/21]
+  
+  ================================================================================
+  Issue Key: A11Y-722
+  Summary: [FE] Loading state for refresh binaries
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-22T20:19:17.608+0530
+  Updated: 2023-11-27T11:04:28.775+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-722
+  
+  Description:
+  When clicked on Refresh we don’t have any loading state, if data is not changed seems like the Refresh button is not working
+  ================================================================================
+
+  [Subtask 3/21]
+  
+  ================================================================================
+  Issue Key: A11Y-723
+  Summary: [FE] Display local identifier
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-22T20:21:49.206+0530
+  Updated: 2023-11-27T16:08:41.330+0530
+  Resolved: Not resolved
+  Comments: 1
+  Attachments: 4
+  URL: https://browserstack.atlassian.net/browse/A11Y-723
+  
+  Description:
+  In Binary selected card with Host Name show local identifier as well 2. Show local identifier along with Host info (  Figma  )
+  ================================================================================
+
+  [Subtask 4/21]
+  
+  ================================================================================
+  Issue Key: A11Y-724
+  Summary: [FE] Change validation for Pages added to accept localhost urls
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-22T20:23:22.775+0530
+  Updated: 2023-11-27T13:44:49.274+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 1
+  URL: https://browserstack.atlassian.net/browse/A11Y-724
+  
+  Description:
+  Change validation for Add pages inputbox to accept localhost urls Add warning message when Localhost url is detected
+  ================================================================================
+
+  [Subtask 5/21]
+  
+  ================================================================================
+  Issue Key: A11Y-739
+  Summary: Binary inactive scenario is not handled
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T10:54:50.381+0530
+  Updated: 2023-11-27T20:57:32.027+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-739
+  
+  Description:
+  When binary is inactive the website scanner should throw the error, currently its failing in backend but not communicated to FE
+  ================================================================================
+
+  [Subtask 6/21]
+  
+  ================================================================================
+  Issue Key: A11Y-740
+  Summary: [FE] Local testing banner should be removed when the local testing is enabled
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T10:56:54.054+0530
+  Updated: 2023-11-27T20:56:49.079+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-740
+  
+  Description:
+  When a user enables local testing, selects a binary and inputs a staging URL, a banner is displayed to enable local testing to test for non public pages.
+  ================================================================================
+
+  [Subtask 7/21]
+  
+  ================================================================================
+  Issue Key: A11Y-741
+  Summary: [BE] remove Properties field
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T11:01:56.541+0530
+  Updated: 2023-11-29T10:44:47.027+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 1
+  URL: https://browserstack.atlassian.net/browse/A11Y-741
+  
+  Description:
+  For properties just show the keys captured, values should not be shown to the user just like below screenshot
+  ================================================================================
+
+  [Subtask 8/21]
+  
+  ================================================================================
+  Issue Key: A11Y-742
+  Summary: [FE] Disable the Confirm button, when binary is not selected
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T11:05:28.392+0530
+  Updated: 2023-11-27T20:57:07.252+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-742
+  
+  Description:
+  No description
+  ================================================================================
+
+  [Subtask 9/21]
+  
+  ================================================================================
+  Issue Key: A11Y-744
+  Summary: [FE] Remove unnecessary scroll on Binary select modal
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mridul Kumar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T11:08:31.875+0530
+  Updated: 2023-11-28T17:40:47.572+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-744
+  
+  Description:
+  No description
+  ================================================================================
+
+  [Subtask 10/21]
+  
+  ================================================================================
+  Issue Key: A11Y-751
+  Summary: WCAG issues
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T14:54:08.297+0530
+  Updated: 2023-11-28T09:53:08.245+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-751
+  
+  Description:
+  WCAG issue: Add aria-label for Radio buttons in Binary select modal - Currently its reading [object Object] Remove tab focus from the Dimmed Confirm button Add button for Login config - Should have aria-label as  Add login configuration   View configuration guide should open docs with Open in a new tab button
+  ================================================================================
+
+  [Subtask 11/21]
+  
+  ================================================================================
+  Issue Key: A11Y-752
+  Summary: Instrumentation issues
+  Type: Story Bug
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T14:55:12.871+0530
+  Updated: 2023-11-28T10:15:49.430+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-752
+  
+  Description:
+  Instrumentation issue If local is not enabled don’t show type as CLT in these event  InteractedWithWSNewWebsiteScanView Missing event -  InteractedWithWSScanOverview OnSelectBinaryView  should be shown when the Binary select modal is opened
+  ================================================================================
+
+  [Subtask 12/21]
+  
+  ================================================================================
+  Issue Key: A11Y-753
+  Summary: UI improvements
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-11-27T14:56:43.260+0530
+  Updated: 2023-11-28T09:54:19.774+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 1
+  URL: https://browserstack.atlassian.net/browse/A11Y-753
+  
+  Description:
+  Truncate the property value on Enable local testing card Change the title from “Enable local testing” to “Add a local testing setup” and the button from “Enable” to “Add” Change icon used in Enable local testing button
+  ================================================================================
+
+  [Subtask 13/21]
+  
+  ================================================================================
+  Issue Key: A11Y-755
+  Summary: Local testing enabled dropdown host info and local identifier are separated with both , and ;
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mridul Kumar
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-27T18:13:13.040+0530
+  Updated: 2023-11-27T20:59:11.867+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 1
+  URL: https://browserstack.atlassian.net/browse/A11Y-755
+  
+  Description:
+  Remove ;
+  ================================================================================
+
+  [Subtask 14/21]
+  
+  ================================================================================
+  Issue Key: A11Y-759
+  Summary: On-demand scans not running when binary is inactive
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-27T18:46:07.397+0530
+  Updated: 2023-11-28T18:11:50.948+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-759
+  
+  Description:
+  Go to  Website scan Make sure the configured binary is inactive. Run an on-demand scan Observation: The on-demand scan does not start.  Expected behaviour: The scan should fail with appropriate error state.
+  ================================================================================
+
+  [Subtask 15/21]
+  
+  ================================================================================
+  Issue Key: A11Y-760
+  Summary: Pages with local URLs not considered in Scan stability trend graph
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-27T19:47:47.708+0530
+  Updated: 2023-11-28T18:12:43.642+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-760
+  
+  Description:
+  No description
+  ================================================================================
+
+  [Subtask 16/21]
+  
+  ================================================================================
+  Issue Key: A11Y-769
+  Summary: Handling of errors should be on URL level
+  Type: Sub-task
+  Status: Closed
+  Priority: P1
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 0.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-28T17:22:19.096+0530
+  Updated: 2023-11-28T19:08:57.863+0530
+  Resolved: Not resolved
+  Comments: 1
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-769
+  
+  Description:
+  had earlier communicated that if a binary is not running the public URLs will be scanned and not the local ones. This is contrary to what we had anticipated earlier that the Automate session will entirely fail. The way we have implemented the error handling is still based on the previous understanding. This needs to be handled on URL level. Refer  TB  for more details. This would have to be handled for both Error scenarios 1 and 2. Sample scan run:  Link Slack thread CC:
+  ================================================================================
+
+  [Subtask 17/21]
+  
+  ================================================================================
+  Issue Key: A11Y-770
+  Summary: Internal binaries should not be listed
+  Type: Sub-task
+  Status: Closed
+  Priority: P1
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-28T17:50:17.014+0530
+  Updated: 2023-11-28T19:51:33.561+0530
+  Resolved: Not resolved
+  Comments: 2
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-770
+  
+  Description:
+  certain binaries should be excluded such as *-browserstack-fork-* local-ip-whitelisting local-ip-geolocation-* applivePlaystore appAutomatePlaystore Slack thread
+  ================================================================================
+
+  [Subtask 18/21]
+  
+  ================================================================================
+  Issue Key: A11Y-771
+  Summary: HTTP 304 errors issue
+  Type: Sub-task
+  Status: Closed
+  Priority: P1
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-28T18:20:44.648+0530
+  Updated: 2023-12-04T10:07:25.472+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-771
+  
+  Description:
+  Two scans: I ran my Local docs setup and created a  website scan  with a few pages including  http://localhost:3000/docs/ . I got " 304 Not Modified " for this and  bbc.com .  I created another  scan  with Localhost docs URLs. URLs: http://localhost:3000/docs/automate/selenium/getting-started/java  : [HTTP 304] Not Modified http://localhost:3000/docs/automate/selenium/getting-started/java/integrate-your-tests  : Success http://localhost:3000/docs/ : [HTTP 304] Not Modified http://localhost:3000/d...
+  ================================================================================
+
+  [Subtask 19/21]
+  
+  ================================================================================
+  Issue Key: A11Y-772
+  Summary: Error scenarios issue: Wrong error shown when binary is not running
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-28T19:12:12.934+0530
+  Updated: 2024-01-02T12:23:32.827+0530
+  Resolved: Not resolved
+  Comments: 4
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-772
+  
+  Description:
+  Repro steps:  Set up a scan with a local binary. Stop the binary before the scan runs. Current behaviour:  Error Scenario 2  is shown. Expected behaviour :  Error Scenario 1  should be shown. Example report:  Link
+  ================================================================================
+
+  [Subtask 20/21]
+  
+  ================================================================================
+  Issue Key: A11Y-773
+  Summary: Error scenario 1 and 2: The Local error should be shown across all three tabs
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 2.0
+  Sprint: N/A
+  Assignee: Mirudhula Devi Nadar
+  Reporter: ABHISHEK THAMMAN
+  Creator: ABHISHEK THAMMAN
+  Created: 2023-11-28T19:15:24.101+0530
+  Updated: 2024-03-22T20:00:49.333+0530
+  Resolved: Not resolved
+  Comments: 1
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-773
+  
+  Description:
+  In case of  error scenario 1 and 2 , in a corresponding report the Local error is shown only on the Summary tab.  Expected behaviour : Error should be shown across all three tabs.  Example report
+  ================================================================================
+
+  [Subtask 21/21]
+  
+  ================================================================================
+  Issue Key: A11Y-803
+  Summary: [BE] Handling of error when local is not working between the scans
+  Type: Sub-task
+  Status: Closed
+  Priority: P2
+  Project: Accessibility (A11Y)
+  Epic: A11Y-719
+  Story Points: 1.0
+  Sprint: N/A
+  Assignee: Kranthi Anugu
+  Reporter: Mirudhula Devi Nadar
+  Creator: Mirudhula Devi Nadar
+  Created: 2023-12-06T12:26:46.633+0530
+  Updated: 2024-01-02T12:23:06.430+0530
+  Resolved: Not resolved
+  Comments: 0
+  Attachments: 0
+  URL: https://browserstack.atlassian.net/browse/A11Y-803
+  
+  Description:
+  When sitemap scanner was running with local testing on but it got disconnected in between it is throwing local error on scan level instead it should throw in page level as some pages have been scanned and A11y issues have been found. Group 2 sample report:    Handling of error scenario 3 on
+  ================================================================================
+
+====================================================================================================
