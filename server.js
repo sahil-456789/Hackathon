@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-const splitIntoChunks = (text, chunkSize = 2000) => {
+const splitIntoChunks = (text, chunkSize = 5000) => {
   const chunks = [];
   let i = 0;
   while (i < text.length) {
@@ -40,7 +40,7 @@ const splitIntoChunks = (text, chunkSize = 2000) => {
     i = end;
   }
   // to do remove this
-  return chunks;
+  return chunks.splice(0, 5);
 };
 
 // Extract metrics from each chunk
@@ -64,6 +64,32 @@ const extractMetricsFromChunks = async (chunks, dataType) => {
   return extractedData.join("\n\n");
 };
 
+const extractJsonFromResponse = (response) => {
+  try {
+    // Get the content from the response
+    const content = response.message.content;
+
+    // Find JSON content between markdown code blocks
+    const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+
+    if (jsonMatch && jsonMatch[1]) {
+      // Parse the extracted JSON string
+      const jsonString = jsonMatch[1].trim();
+      return JSON.parse(jsonString);
+    } else {
+      // If no markdown code blocks, try to find JSON directly
+      const possibleJson = content.match(/\{[\s\S]*\}/);
+      if (possibleJson) {
+        return JSON.parse(possibleJson[0]);
+      }
+      throw new Error("No JSON found in response");
+    }
+  } catch (error) {
+    console.error("Error extracting JSON:", error);
+    return null;
+  }
+};
+
 // Final analysis using extracted data
 const getProjectHealthAnalysis = async (jiraMetrics, confluenceMetrics) => {
   return await ollama.chat({
@@ -71,22 +97,56 @@ const getProjectHealthAnalysis = async (jiraMetrics, confluenceMetrics) => {
     messages: [
       {
         role: "system",
-        content:
-          "Create a project health analysis in JSON format that can be parsed with JSON.parse",
+        content: "Create a project health analysis in JSON format that can be parsed with JSON.parse",
       },
       { role: "user", content: `Jira metrics: ${jiraMetrics}` },
       { role: "user", content: `Confluence metrics: ${confluenceMetrics}` },
       {
         role: "user",
-        content: `Based on these metrics, provide a project health analysis in this JSON format:
+        content: `Based on these metrics, this project health analysis of given JSON format type don't add any comment inside json I need clean json which can be easilty parsed by JSON.parse:
         {
           "projectHealth": "GREEN|YELLOW|RED",
-          "score": 0-100,
+          "score": 0-100, // Overall project health score
           "metrics": {
-            "velocity": {...},
-            "issueStatus": {...},
-            "risks": [...],
-            "recommendations": [...]
+            "velocity": number // Number representing team velocity,
+            "issueStatus": {
+              "open": number, // Number of open issues
+              "inProgress": number, // Number of issues in progress
+              "closed": number // Number of closed issues
+            },
+            "teamPerformance": {
+                "engagement": 78, // Team engagement score out of 100
+                "satisfaction": 72, // Team satisfaction score out of 100
+                "velocity": 75 // Team velocity score out of 100
+            },
+            projectRiskFactors: { // Overall project risk factors
+                "risk1": {
+                    "description": "Description of the risk factor",
+                    "impact": "HIGH|MEDIUM|LOW", // Impact level of the risk
+                    "mitigationStatus": "NOT_STARTED|IN_PROGRESS|COMPLETED" // Current status of risk mitigation
+                }
+            }[] // List of overall project risk factors
+            ,
+            "milestones": {
+                "title": "Milestone 1",
+                "description": "Description of Milestone 1",
+                "status": "GREEN"|"YELLOW"|"RED", // status of the milestone based on due date and completion percentage
+                "completionPercentage": number, // percentage of tasks completed for the milestone
+                "dueDate": "2023-10-01", // due date of the milestone
+                "velocity": number // velocity of the team related to this milestone,
+                "riskFactors": { // Milestone risk factors
+                    "risk1": {
+                        "description": "Description of the risk factor",
+                        "impact": "HIGH|MEDIUM|LOW", // Impact level of the risk
+                        "mitigationStatus": "NOT_STARTED|IN_PROGRESS|COMPLETED" // Current status of risk mitigation
+                    }
+                }[] // List of risk factors affecting this milestone
+            }[],
+            "recommendations": {
+                "title": "Recommendation 1",
+                "description": "Description of recommendation 1",
+                "status": "NOT_STARTED|IN_PROGRESS|COMPLETED"
+            }[],
           },
           "analysis": "summary text"
         }`,
@@ -102,34 +162,24 @@ app.use(express.json()); // body parser
 // Routes
 app.use("/api/products", productRoutes);
 
-app.get("/api/project", async (req, res) => {
+app.get("/api/project-health", async (req, res) => {
   try {
     // Read data files
-    // const jiraData = fs.readFileSync(
-    //   "./ruby_server/jira_board_data.txt",
-    //   "utf-8"
-    // );
-    const confluenceData = fs.readFileSync("./confluence.txt", "utf-8");
+    const jiraData = fs.readFileSync("./fetches/scripts/jira_epic_data.txt", "utf-8");
+    const confluenceData = fs.readFileSync("./fetches/scripts/confluence_documents_data.txt", "utf-8");
 
     // Split into manageable chunks
-    // const jiraChunks = splitIntoChunks(jiraData);
+    const jiraChunks = splitIntoChunks(jiraData);
     const confluenceChunks = splitIntoChunks(confluenceData);
 
     // Extract metrics from each chunk
-    // const jiraMetrics = await extractMetricsFromChunks(jiraChunks, "Jira");
-    const confluenceMetrics = await extractMetricsFromChunks(
-      confluenceChunks,
-      "Confluence"
-    );
+    const jiraMetrics = await extractMetricsFromChunks(jiraChunks, "Jira");
+    const confluenceMetrics = await extractMetricsFromChunks(confluenceChunks, "Confluence");
 
     // Final analysis using the extracted metrics
-    const aiResponse = await getProjectHealthAnalysis(
-      //   jiraMetrics,
-      "hello",
-      confluenceMetrics
-    );
+    const aiResponse = await getProjectHealthAnalysis(jiraMetrics, confluenceMetrics);
 
-    res.send(aiResponse);
+    res.send(extractJsonFromResponse(aiResponse));
   } catch (error) {
     console.error("Error analyzing project health:", error);
     res.status(500).send({ error: "Failed to analyze project health" });
